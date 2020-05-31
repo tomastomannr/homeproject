@@ -1,0 +1,18 @@
+# Common / Maven
+**/target/
+**/java-generated/
+**/*.log
+**/jacoco*.exec
+jacoco-it.exec
+
+# IntelliJ
+*.iml
+#!.idea/inspectionProfiles/
+#!.idea/codeStyleSettings.xml
+.idea/
+
+# Eclipse
+**/.settings/
+**/.classpath
+**/.project
+logs/

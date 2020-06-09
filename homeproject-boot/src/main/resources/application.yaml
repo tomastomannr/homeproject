@@ -1,22 +1,26 @@
+#server:
+#  port : 8090
+
 spring:
   cloud:
     stream:
+      default-binder: kafka
       kafka:
         binder:
           brokers: 192.168.0.126:9092
           zkNodes: 192.168.0.126:2181
           auto-create-topics: false
-        bindings:
-          outputChannelOne:
-            producer:
-              configuration:
-                key.serializer: org.apache.kafka.common.serialization.StringSerializer
-#      default:
-#        producer:
-#          header-mode: embeddedHeaders
+#        bindings:
+#          outputChannelOne:
+#            producer:
+#              configuration:
+#                key.serializer: org.apache.kafka.common.serialization.StringSerializer
       bindings:
+        inputChannelOne:
+          destination: channelOne
+          group: homeProjectReader
+          content-type: application/json
         outputChannelOne:
           destination: channelOne
           content-type: application/json
-#  kafka:
-#    bootstrap-servers: 192.168.0.126:9092 nejde ked toto setnem
+          group: homeProjectWriter

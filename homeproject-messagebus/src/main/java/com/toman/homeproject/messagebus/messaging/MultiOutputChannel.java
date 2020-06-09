@@ -5,7 +5,7 @@ import org.springframework.messaging.MessageChannel;
 
 public interface MultiOutputChannel {
 
-    public String OUTPUT_CHANNEL_ONE ="outputChannelOne";
+    String OUTPUT_CHANNEL_ONE ="outputChannelOne";
 
     @Output(OUTPUT_CHANNEL_ONE)
     MessageChannel outputChannelOne();

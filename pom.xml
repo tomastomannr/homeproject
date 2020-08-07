@@ -62,6 +62,17 @@
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>2.3.0.RELEASE</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.ferratum</groupId>
+                <artifactId>integration-protocols</artifactId>
+                <version>1.422</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro</artifactId>
+                <version>1.8.2</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
